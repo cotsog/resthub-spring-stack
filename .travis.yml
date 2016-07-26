@@ -1,5 +1,13 @@
 language: java
-jdk:
-  - openjdk7
-  - oraclejdk7
-  - oraclejdk8
+
+matrix:
+  include:
+    - sudo: false
+      jdk: oraclejdk8
+    - sudo: required
+      dist: precise
+      jdk: oraclejdk8
+    - sudo: required
+      dist: trusty
+      jdk: oraclejdk8
+
